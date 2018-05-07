@@ -1,4 +1,11 @@
-
+<h1> 
+    BirdScraper 
+</h1>
+<h3> 
+    This program scrapes a list of birds and cleans the list.
+    It then groups the birds by the colors used in their names (i.e. black storm-petrel)
+    and plots the distribution with matplotlib.
+</h3>
 
 ```python
 import operator
