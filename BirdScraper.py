@@ -43,31 +43,23 @@ for count, bird in enumerate (clean_birds):
             if not color in colored_birds:
                 clean_birds[count] = list()
             colored_birds[color].append(bird)
-#print(colored_birds)
-#print(len(colored_birds))
-#print(len(clean_birds))
 
 #Counts how many birds with a color in their name
 color_counter = []
 for color in color_list:
     color_counter.append(len(colored_birds[color]))
-    print(color, len(colored_birds[color]))
-        
+
+
 #Plot number of birds by color in name
 labels = color_list
 sizes = color_counter
+# colors = ['olive','purple','orange','yellow','teal','green','white','black','gray',
+#           'blue','red']
 fig1, ax1 = plt.subplots()
-ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+ax1.pie(sizes, labels=labels, colors=color_list, autopct='%1.1f%%',
         shadow=False, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
-#ax1.set_prop_cycle(color_list)
-#plt.rc('axes', prop_cycle=(cycler(color, (color_list))))
-
-ax1.set_prop_cycle('color',(color_list))
-
-#for label_color in fig1.findobj(hasattr(ax1, 'set_color')):
-#         label_color.set_color([color])
 
 plt.show()
 
