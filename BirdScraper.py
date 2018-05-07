@@ -51,4 +51,5 @@ plt.axis('equal')
 plt.title("Percentage of each color used in birds' names")
 caption = "Source: http://www.californiabirds.org/main_list.txt"
 fig.text(0.5, 0.05, caption, ha='center')
+plt.rcParams["figure.figsize"] = [7,7]
 plt.show()
