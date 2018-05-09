@@ -53,3 +53,15 @@ caption = "Source: http://www.californiabirds.org/main_list.txt"
 fig.text(0.5, 0.05, caption, ha='center')
 plt.rcParams["figure.figsize"] = [7,7]
 plt.show()
+
+# Additional stats:
+num_colored_birds = 0
+for color_count in sizes:
+    num_colored_birds += color_count
+print("Of the " + str(len(clean_birds)) + " species of birds in California, " +
+      str(num_colored_birds) + " (" + str(round(num_colored_birds/len(clean_birds)*100, 2)) + "%) " +
+      "have a color in their name.")
+
+print("Of the " + str(len(clean_birds)) + " species of birds in California, " +
+      str(num_colored_birds) + " (" + str(round(colored_birds["red"]/len(clean_birds)*100, 2)) + "%) " +
+      "have the color red in their name.")
