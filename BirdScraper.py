@@ -63,5 +63,5 @@ print("Of the " + str(len(clean_birds)) + " species of birds in California, " +
       "have a color in their name.")
 
 print("Of the " + str(len(clean_birds)) + " species of birds in California, " +
-      str(num_colored_birds) + " (" + str(round(colored_birds["red"]/len(clean_birds)*100, 2)) + "%) " +
+      str(colored_birds["red"]) + " (" + str(round(colored_birds["red"]/len(clean_birds)*100, 2)) + "%) " +
       "have the color red in their name.")
